@@ -1,0 +1,11 @@
+**/*.html
+**/*.txt
+**/*.md
+**/*.svg
+**/*.ttf
+**/*.woff
+**/*.eot
+package.json
+*-lock.yaml
+node_modules
+dist/
