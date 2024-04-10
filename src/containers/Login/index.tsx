@@ -7,7 +7,7 @@ import { LOGIN } from '../../graphql/auth';
 import styles from './index.module.less';
 
 interface IValue {
-  username: string;
+  account: string;
   password: string;
 }
 
@@ -50,7 +50,7 @@ export default () => {
   return (
     <div className={styles.container}>
       <LoginFormPage<IValue>
-        initialValues={{ username: 'admin', password: 'admin123' }}
+        initialValues={{ account: 'admin', password: 'admin123' }}
         backgroundImageUrl="https://mdn.alipayobjects.com/huamei_gcee1x/afts/img/A*y0ZTS6WLwvgAAAAAAAAAAAAADml6AQ/fmt.webp"
         backgroundVideoUrl="https://gw.alipayobjects.com/v/huamei_gcee1x/afts/video/jXRBRK_VAwoAAAAAAAAAAAAAK4eUAQBr"
         title="Github"
@@ -61,23 +61,23 @@ export default () => {
           centered
           items={[
             {
-              key: 'account',
+              key: 'item1',
               label: '账号密码登录',
             },
           ]}
         />
         <>
           <ProFormText
-            name="username"
+            name="account"
             fieldProps={{
               size: 'large',
               prefix: <UserOutlined className="prefixIcon" />,
             }}
-            placeholder="用户名: admin"
+            placeholder="账号: admin"
             rules={[
               {
                 required: true,
-                message: '请输入用户名!',
+                message: '请输入账号!',
               },
             ]}
           />
